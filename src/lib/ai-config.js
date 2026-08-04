@@ -9,6 +9,13 @@
 // Using Sonnet as a balance of quality and speed for a chat interface.
 export const CHAT_MODEL = "claude-sonnet-5";
 
+// When true, the chat route uses a local fake model instead of
+// calling the real Anthropic API. Useful for testing/demoing the
+// interface (streaming, errors, retry) without needing API credits.
+// Set MOCK_MODE=true in .env.local to enable; remove it (or set to
+// anything else) to use the real API again.
+export const MOCK_MODE = process.env.MOCK_MODE === "true";
+
 // The system prompt sets the assistant's persona and behavior for
 // every conversation. Edit this to match your capstone's actual use
 // case (e.g. a qualification chatbot, an audit summarizer, etc).

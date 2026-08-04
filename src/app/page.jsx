@@ -17,7 +17,7 @@ export default function ChatPage() {
   const [isRetrying, setIsRetrying] = useState(false);
   const scrollContainerRef = useRef(null);
 
-  const isThinking = status === "submitted";
+ const isThinking = status === "submitted";
   const isStreaming = status === "streaming";
   const isBusy = isThinking || isStreaming;
   const hasError = status === "error";
